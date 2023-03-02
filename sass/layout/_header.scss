@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+.header{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background: url(../img/headerImg.png) right bottom/974px 606px  no-repeat;
+    background-color: #ffd38d;
+    background-blend-mode: soft-light;
+    padding-top: 17px;
+
+    &-content{
+        display: flex;
+        flex-direction: column;
+
+        &__menu{
+            display: flex;
+            align-items: center;
+
+            margin: 9px 0 9px 0;
+            
+            & img{
+                margin-right: 65.22px;
+            }
+
+            & a{
+                font-family: 'Montserrat', sans-serif;    
+                font-size: 14px;
+                font-weight: 700;
+                color: black;
+                outline: none;
+                cursor: pointer;
+    
+                &:nth-last-child(n+2){
+                    margin-right: 42px;
+                }
+            }
+
+            &-contacts{
+                display: flex;
+                flex-direction: column;
+                font-family: 'Montserrat', sans-serif; 
+                margin-left: 67px;
+
+                &__phone{
+                    font-weight: 700;
+                    font-size: 16px;
+                    margin-bottom: 2px;
+
+                    &:before{
+                        content:"";
+                        background-image: url(../img/icons/phone_icon.svg);
+                        background-size: cover;
+                        height: 14px;
+                        width: 14px;
+                        display: inline-block;
+                        vertical-align: middle;
+                        margin-right: 10px;
+                    }
+
+                    &:after{
+                        content:"";
+                        background-image: url(../img/icons/arrow_down_icon.svg);
+                        background-size: cover;
+                        height: 5px;
+                        width: 10px;
+                        display: inline-block;
+                        vertical-align: middle;
+                        margin-left: 8px;
+                    }
+                }
+
+                &__order a{
+                    font-weight: 400;
+                    font-size: 12px;
+                    color: #2D2D2D;
+                    border-bottom:1px dashed #2D2D2D;
+                    float: right;
+                    margin-right: 23px
+                }
+            }
+        }
+    
+        &__description{
+            display: flex;
+            margin: 207px 0 259px 0;
+            &-text{
+                font-size: 32px;
+                font-weight: 700;
+                line-height: 48px;
+                max-width: 448px;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
