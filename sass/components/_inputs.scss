@@ -1,0 +1,11 @@
+.input_idle{
+    background: inherit;
+    border-bottom: 1px solid #3E3E3D;
+    width: 142px;
+    padding-bottom: 6px;
+    padding-left: 10px;
+
+    &:focus{
+        border-color: #DC911B;
+    }
+}
