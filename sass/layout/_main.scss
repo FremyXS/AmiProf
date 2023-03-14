@@ -68,8 +68,22 @@
     &-feedback{
         background: #3E3E3D;
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        justify-content: center;
+
+        &__in{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            
+           
+        }
+
+        &__img{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
 
         &__title{
             margin-top: 125px;
@@ -94,12 +108,91 @@
                     }
                 }
             }
+
+            &-buttons{
+                display: flex;
+                justify-content: center;
+                position: sticky;
+                margin: 41px 28px 65px;
+                &__link {
+                    display: flex;
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    & a{
+                        font-weight: 700;
+                        font-size: 18px;
+                        text-transform: uppercase;
+    
+                        color: #FFFFFF;
+                    }
+                }
+            }
         }
     }
 
     &-projects{
-        &__title{
-            margin-top: 76.84px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &__in{
+
+            &-title{
+                margin-top: 76.84px;
+                margin-bottom: 98.16px;
+            }
+
+            &-content{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                &__project{
+                    position: relative;
+                    display: flex;
+                    height: 312px;
+
+                    &:nth-last-child(n+2){
+                        margin-bottom: 106px;
+                    }
+
+                    & > div {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                    }
+
+                    &-center{
+                        margin-left: -180px;
+                        z-index: -1;
+                    }
+
+                    &-right{
+                        margin-left: 59px;
+                    }
+
+                    &-description{
+                        width: 228px;
+                    }
+
+                    &-date{
+                        font-weight: 700;
+                        font-size: 14px;
+                        text-transform: uppercase;
+
+                        color: #6F6F6E;
+
+                        position: absolute;
+                        bottom: 0;
+                    }
+
+                    &-button{
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                    }
+                }
+            }
         }
     }
 

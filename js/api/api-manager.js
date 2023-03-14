@@ -17,3 +17,26 @@ export const getUsefulArticlesList = () => {
 
     return [articleMock, articleMock, articleMock, articleMock];
 }
+
+export const getProjectsList = () => {
+     //имимтация запроса, для получение проектов
+
+     return [
+        {
+            title: "название проекта 1",
+            description: "Очень много текста примерно "
+                +"на три строчки, ибо больше"
+                +"никто читать не будет.",
+            date: "12/2020",
+            image: "../img/project_one_image.png"
+        },
+        {
+            title: "название проекта 2",
+            description: "Очень много текста примерно "
+                +"на три строчки, ибо больше"
+                +"никто читать не будет.",
+            date: "12/2020",
+            image: "../img/project_two_image.png"
+         }
+     ]
+}
