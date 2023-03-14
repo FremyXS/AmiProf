@@ -1,2 +1,2 @@
 # AmiProf
-<image src="./amiprof" alt="Текст с описанием картинки">
+<image src="./amiprof.jpeg" alt="Текст с описанием картинки">
