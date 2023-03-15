@@ -1,0 +1,133 @@
+.footer{
+    background-color: #3E3E3D;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+
+    &-in{
+        margin-top: 30px;
+        padding-bottom: 52px;
+
+        &__top{
+            display: flex;
+            padding-bottom: 55px;
+            border-bottom: 1px solid #777E89;
+
+            &-links{
+                display: flex;
+
+                &__element{
+                    & p{
+                        font-weight: 700;
+                        font-size: 15px;
+                        color: #FFFFFF;
+                        margin-bottom: 15px;                
+                    }
+    
+                    & dt > a{
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 27px;
+                        color: #777E89;
+                    }
+
+                    &:nth-child(1){
+                        margin-right: 159px;
+                    }
+
+                    &:nth-child(2){
+                        margin-right: 193px;
+                    }
+
+                    &:nth-child(3){
+                        margin-right: 184px;
+                    }
+                }
+            }
+
+            &-contact{
+                display: flex;
+                flex-direction: column;
+
+                &__search{
+                    margin-bottom: 30px;
+                }
+
+                &__info{
+                    display: flex;
+
+                    &-addresses{
+                        font-weight: 400;
+                        font-size: 14px;
+                        color: #FFFFFF;
+                        margin-right: 104px;
+
+                        & dl > dt{
+                            &:first-child{
+                                text-decoration-line: underline;
+                                margin-bottom: 22px;
+    
+                                &:before{
+                                    content: '';
+                                    background-image: url(../img/icons/ic-round-email.svg);
+                                    display: inline-block;
+                                    width: 16px;
+                                    height: 13px;
+                                    vertical-align: middle;
+                                    margin-right: 10px;
+                                }
+                            }
+
+                            &:nth-child(2):before{
+                                content: '';
+                                background-image: url(../img/icons/fa-solid_map-marker-alt.svg);
+                                display: inline-block;
+                                width: 14px;
+                                height: 18px;
+                                vertical-align: middle;
+                                margin-right: 11px;
+                            }
+                        }
+                    }
+
+                    &-phone{
+                        & p{
+                            font-weight: 700;
+                            font-size: 16px;
+                            color: #FFFFFF;
+                            margin-bottom: 15px;
+
+                            &:before{
+                                content: '';
+                                background-image: url(../img/icons/ic-baseline-local-phone.svg);
+                                display: inline-block;
+                                width: 16px;
+                                height: 16px;
+                                vertical-align: middle;
+                                margin-right: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &__bottom{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            padding-top: 55px;
+
+            & span{
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                font-weight: 400;
+                font-size: 13px;
+                color: #777E89;
+            }
+        }
+    }
+}
