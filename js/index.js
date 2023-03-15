@@ -1,4 +1,5 @@
-import { getFeedBacksList, getUsefulArticlesList, getProjectsList } from './api/api-manager.js';
+import { getFeedBacksList, getUsefulArticlesList, getProjectsList, getNewsList } from './api/api-manager.js';
+import { createNewsHandler } from './handlers/_createNewsHandler.js';
 
 function getListFeedBack(){
 
@@ -100,7 +101,18 @@ function getListFeedBack(){
     })
 
     getProjectsList().map((el) => {
-        document.getElementById("list-projects").insertAdjacentElement("beforeend", getOneProject(el));
+        document.getElementById("list-projects").insertAdjacentElement("afterbegin", getOneProject(el));
+    })
+
+    getNewsList().map((el, index) => {
+        document.getElementById( index > 0? "news_list" : "first_news")
+        .insertAdjacentElement("afterbegin", 
+            createNewsHandler(el)
+        );
+    })
+
+    getFeedBacksList().map((el)=>{
+        document.getElementById("certificates_list").insertAdjacentElement("afterbegin", getOneFeedBack(el));
     })
 
 }
