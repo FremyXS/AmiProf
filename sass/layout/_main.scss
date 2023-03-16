@@ -8,72 +8,8 @@
     @import "../sections/news";    
     @import "../sections/questions";    
     @import "../sections/usefularticles";    
-
-    &-certificates{
-        background: #3E3E3D;
-        display: flex;
-        justify-content: center;
-
-        &__in{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            position: relative;
-
-            &-title{
-                color: #FFFFFF;
-                margin-top: 81px;
-            }
-
-            &-content{
-                margin-top: 106px;
-
-                &__list{
-                    display: flex;
-
-                    &__element{
-
-                        & img{
-                            height: 341px;
-                            width: 242px;
-                        }
-
-                        &:nth-last-child(n+2){
-                            margin-right: 47px;
-                        }
-                    }
-                }
-
-                &__buttons{
-                    display: flex;
-                    justify-content: center;
-                    position: sticky;
-                    margin: 41px 28px 65px;
-
-                    &-link {
-                        display: flex;
-                        position: absolute;
-                        right: 0;
-                        bottom: 0;
-                        & a{
-                            font-weight: 700;
-                            font-size: 18px;
-                            text-transform: uppercase;
-        
-                            color: #FFFFFF;
-                        }
-                    }
-                }
-            }
-        }
-
-        &__img{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            margin-left: 87px;
-        }
-    }
+    @import "../sections/certificates";
+    
 
     &-customers{
         display: flex;
