@@ -4,10 +4,10 @@ import { createFeedBackHandler } from './handlers/_createFeedBackHandler.js';
 import { createProjectHandler } from './handlers/_createProjectHandler.js';
 import { createUsefulArticlesHandler } from './handlers/_createUsefulArticlesHandler.js'; 
 
-function getListFeedBack(){
+ window.onload = function(){
 
     getFeedBacksList().map((el)=>{
-        document.getElementById("feedbacks_list").insertAdjacentElement("afterbegin", createFeedBackHandler(el));
+        document.getElementById("feedbacks_list").insertAdjacentElement("afterbegin", createFeedBackHandler(el, "feedback"));
     })
 
     getUsefulArticlesList().map((el) => {
@@ -26,9 +26,6 @@ function getListFeedBack(){
     })
 
     getFeedBacksList().map((el)=>{
-        document.getElementById("certificates_list").insertAdjacentElement("afterbegin", createFeedBackHandler(el));
+        document.getElementById("certificates_list").insertAdjacentElement("afterbegin", createFeedBackHandler(el, "certificates"));
     })
-
 }
-
-getListFeedBack();

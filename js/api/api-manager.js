@@ -1,7 +1,7 @@
 export const getFeedBacksList = () => {
     //имимтация запроса, для получение отзывов        
     const url_feedback = '../img/feedback_image.png';
-    return [url_feedback, url_feedback, url_feedback];
+    return [url_feedback, url_feedback, url_feedback, url_feedback, url_feedback];
 }
 
 export const getUsefulArticlesList = () => {

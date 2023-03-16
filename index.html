@@ -122,23 +122,29 @@
             </div>
             <div class="main-feedback">
                 <div class="main-feedback__in">
-                    <div class="main-feedback__title">
+                    <div class="main-feedback__in-title">
                         <h1>Отзывы клиентов</h1>
                     </div>
-                    <div class="main-feedback__content" >
-                        <div class="main-feedback__content-list" id="feedbacks_list">
+                    <div class="main-feedback__in-content" >
+                        <div class="main-feedback__in-content__list" id="feedbacks_list">
     
                         </div>
-                        <div class="main-feedback__content-buttons">
-                            <div class="main-feedback__content-buttons__switches">
-                                <button class="btn_arrow-gray" type="button">
+                        <div class="main-feedback__in-content__buttons">
+                            <div class="main-feedback__in-content__buttons-switches">
+                                <button id="btn-prev-feedback"
+                                class="btn_arrow-gray slider-previous" 
+                                type="button"
+                                onclick="previousSlideFeedback()">
                                     <img style="transform: scale(-1, 1)" src="./img/icons/arrow_right_black_icon.svg">
                                 </button>
-                                <button class="btn_arrow-brown" type="button">
+                                <button id="btn-next-feedback" 
+                                class="btn_arrow-brown slider-next" 
+                                type="button" 
+                                onclick="nextSlideFeedback()">
                                     <img src="./img/icons/arrow_right_black_icon.svg">
                                 </button>
                             </div>
-                            <div class="main-feedback__content-buttons__link">
+                            <div class="main-feedback__in-content__buttons-link">
                                 <a href="*">показать все</a>
                             </div>
                         </div>
@@ -228,10 +234,18 @@
                         </div>
                         <div class="main-certificates__in-content__buttons">
                             <div class="main-certificates__in-content__buttons-switches">
-                                <button class="btn_arrow-gray" type="button">
+                                <button 
+                                id="btn-prev-certificates"
+                                class="btn_arrow-gray" 
+                                type="button"
+                                onclick="previousSlideSertificates()">
                                     <img style="transform: scale(-1, 1)" src="./img/icons/arrow_right_black_icon.svg">
                                 </button>
-                                <button class="btn_arrow-brown" type="button">
+                                <button 
+                                id="btn-next-certificates"
+                                class="btn_arrow-brown" 
+                                type="button"
+                                onclick="nextSlideSertificates()">
                                     <img src="./img/icons/arrow_right_black_icon.svg">
                                 </button>
                             </div>
@@ -331,6 +345,7 @@
     </div>
         
 </div>
+    <script src="./js/handlers/_slider.js"></script>
     <script type="module" src="./js/index.js"></script>
 </body>    
 </html>

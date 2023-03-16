@@ -10,6 +10,62 @@
         position: relative;
         margin-top: 130px;
         margin-left: -20px;
+
+        &-title{
+            color: #FFFFFF;
+            padding-left: 108px;
+        }
+    
+        &-content{
+            margin-top: 109px;
+            width: 820px;
+            overflow: hidden;
+    
+            &__list{
+                display: flex;
+                transition: left 500ms linear;
+                @keyframes fade {
+                    from {
+                        opacity: 0.1
+                    }
+                    to {
+                        opacity: 1
+                    }
+                }
+                &-element{
+                    animation-name: fade;
+                    animation-duration: 5s;
+                    & img{
+                        height: 341px;
+                        width: 242px;
+                    }
+    
+                    &:nth-last-child(n+2){
+                        margin-right: 47px;
+                    }
+                }
+            }
+    
+            &__buttons{
+                display: flex;
+                justify-content: center;
+                position: sticky;
+                margin: 41px 28px 65px;
+                &-link {
+                    display: flex;
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    & a{
+                        font-weight: 700;
+                        font-size: 18px;
+                        text-transform: uppercase;
+    
+                        color: #FFFFFF;
+                    }
+                }
+            }
+        }
     }
 
     &__img{
@@ -20,48 +76,5 @@
         margin-top: -55px;
     }
 
-    &__title{
-        color: #FFFFFF;
-        padding-left: 108px;
-    }
-
-    &__content{
-        margin-top: 109px;
-
-        &-list{
-            display: flex;
-
-            &__element{
-
-                & img{
-                    height: 341px;
-                    width: 242px;
-                }
-
-                &:nth-last-child(n+2){
-                    margin-right: 47px;
-                }
-            }
-        }
-
-        &-buttons{
-            display: flex;
-            justify-content: center;
-            position: sticky;
-            margin: 41px 28px 65px;
-            &__link {
-                display: flex;
-                position: absolute;
-                right: 0;
-                bottom: 0;
-                & a{
-                    font-weight: 700;
-                    font-size: 18px;
-                    text-transform: uppercase;
-
-                    color: #FFFFFF;
-                }
-            }
-        }
-    }
+    
 }
