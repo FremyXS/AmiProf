@@ -1,7 +1,7 @@
 import { getFeedBacksList, getUsefulArticlesList, getProjectsList, getNewsList } from './api/api-manager.js';
 import { createNewsHandler } from './handlers/_createNewsHandler.js';
 import { createFeedBackHandler } from './handlers/_createFeedBackHandler.js';
-import { createProjectHandler } from './handlers/_createNewProject.js';
+import { createProjectHandler } from './handlers/_createProjectHandler.js';
 
 function getListFeedBack(){
 
