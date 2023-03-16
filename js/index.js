@@ -1,7 +1,7 @@
 import { getFeedBacksList, getUsefulArticlesList, getProjectsList, getNewsList } from './api/api-manager.js';
 import { createNewsHandler } from './handlers/_createNewsHandler.js';
-import { createFeedBackHandler } from './handlers/_createFeedBackHandler.js'
-
+import { createFeedBackHandler } from './handlers/_createFeedBackHandler.js';
+import { createNewProject } from './handlers/_createNewProject.js';
 
 function getListFeedBack(){
 
@@ -35,55 +35,6 @@ function getListFeedBack(){
         return article;
     }
 
-    function getOneProject(projectBody){
-        const CLASS_NAME = "main-projects__in-content";
-        let projectDiv = document.createElement('div');
-        projectDiv.className = CLASS_NAME + "__project";
-
-        let project_left = document.createElement('div');
-        project_left.className = projectDiv.className + "-left"
-        let project_right = document.createElement('div');
-        project_right.className = projectDiv.className + "-right"
-        let project_center = document.createElement('div');
-        project_center.className = projectDiv.className + "-center"
-
-        let project_name = document.createElement('h1');
-        project_name.insertAdjacentText('afterbegin', projectBody.title);
-
-        let project_date = document.createElement('p');
-        project_date.insertAdjacentText('afterbegin', projectBody.date);
-        project_date.className = projectDiv.className + "-date"
-
-        let project_description = document.createElement('p');
-        project_description.insertAdjacentText('afterbegin', projectBody.description);
-        project_description.className = projectDiv.className + "-description";
-
-        let project_image = document.createElement('img');
-        project_image.src = projectBody.image;
-
-        let button = document.createElement('button');
-        button.type='button';
-        button.className = "btn_arrow-brown " + projectDiv.className + "-button";
-        let icon_arrow = document.createElement('img');
-        icon_arrow.src='../img/icons/arrow_right_black_icon.svg';
-        button.insertAdjacentElement('afterbegin', icon_arrow);
-
-        project_center.insertAdjacentElement('afterbegin', project_image);
-
-        project_left.insertAdjacentElement('afterbegin', project_date);
-        project_left.insertAdjacentElement('afterbegin', project_name);
-
-        project_right.insertAdjacentElement('afterbegin', button);
-        project_right.insertAdjacentElement('afterbegin', project_description);
-
-        projectDiv.insertAdjacentElement('afterbegin', project_right);
-        projectDiv.insertAdjacentElement('afterbegin', project_center);
-        projectDiv.insertAdjacentElement('afterbegin', project_left);
-
-        return projectDiv;
-
-    }
-
     getFeedBacksList().map((el)=>{
         document.getElementById("feedbacks_list").insertAdjacentElement("afterbegin", createFeedBackHandler(el));
     })
@@ -93,7 +44,7 @@ function getListFeedBack(){
     })
 
     getProjectsList().map((el) => {
-        document.getElementById("list-projects").insertAdjacentElement("afterbegin", getOneProject(el));
+        document.getElementById("list-projects").insertAdjacentElement("afterbegin", createNewProject(el));
     })
 
     getNewsList().map((el, index) => {
