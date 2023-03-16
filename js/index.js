@@ -1,17 +1,9 @@
 import { getFeedBacksList, getUsefulArticlesList, getProjectsList, getNewsList } from './api/api-manager.js';
 import { createNewsHandler } from './handlers/_createNewsHandler.js';
+import { createFeedBackHandler } from './handlers/_createFeedBackHandler.js'
+
 
 function getListFeedBack(){
-
-    function getOneFeedBack(link){
-        let div = document.createElement('div');
-        let image = document.createElement('img');
-        image.src = link;
-        image.title = "FeedBack";
-        div.className="main-feedback__content-list__element";
-        div.insertAdjacentElement("afterbegin", image);
-        return div;
-    }
 
     function getOneUsefulArticles(articleBody){
         let article = document.createElement('div');
@@ -93,7 +85,7 @@ function getListFeedBack(){
     }
 
     getFeedBacksList().map((el)=>{
-        document.getElementById("feedbacks_list").insertAdjacentElement("afterbegin", getOneFeedBack(el));
+        document.getElementById("feedbacks_list").insertAdjacentElement("afterbegin", createFeedBackHandler(el));
     })
 
     getUsefulArticlesList().map((el) => {
@@ -112,7 +104,7 @@ function getListFeedBack(){
     })
 
     getFeedBacksList().map((el)=>{
-        document.getElementById("certificates_list").insertAdjacentElement("afterbegin", getOneFeedBack(el));
+        document.getElementById("certificates_list").insertAdjacentElement("afterbegin", createFeedBackHandler(el));
     })
 
 }
