@@ -81,21 +81,22 @@
                 margin-top: 94px;
                 display: flex;
                 justify-content: flex-end;
+                position: relative;
 
                 & a {
                     display: block;
-                    margin-right: -38px;
+                    margin-right: -18px;
+                    position: relative;
                 }
 
                 &:after{
                     content: " ";
                     background-image: url(../../img/icons/arrow_right_light_icon.svg);
                     background-size: cover;
-                    display: inline-block;
-                    vertical-align: middle;
+                    position: absolute;
                     width: 9.5px;
                     height: 17px;
-                    margin-left: 10px;
+                    right: -38px;;
 
                 }
             }
