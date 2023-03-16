@@ -5,7 +5,7 @@ const projectClasses = {
     center: "main-projects__in-content__project-center",
     date: "main-projects__in-content__project-date",
     description: "main-projects__in-content__project-description",
-    button: "main-projects__in-content__project-buton",
+    button: "main-projects__in-content__project-button",
 }
 
 export const createNewProject = (projectBody) => {
