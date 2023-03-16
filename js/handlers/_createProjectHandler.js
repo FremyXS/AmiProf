@@ -8,7 +8,7 @@ const projectClasses = {
     button: "main-projects__in-content__project-button",
 }
 
-export const createNewProject = (projectBody) => {
+export const createProjectHandler = (projectBody) => {
     let projectDiv = document.createElement('div');
     projectDiv.className = projectClasses.div;
 

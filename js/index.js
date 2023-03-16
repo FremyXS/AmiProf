@@ -1,7 +1,7 @@
 import { getFeedBacksList, getUsefulArticlesList, getProjectsList, getNewsList } from './api/api-manager.js';
 import { createNewsHandler } from './handlers/_createNewsHandler.js';
 import { createFeedBackHandler } from './handlers/_createFeedBackHandler.js';
-import { createNewProject } from './handlers/_createNewProject.js';
+import { createProjectHandler } from './handlers/_createNewProject.js';
 
 function getListFeedBack(){
 
@@ -44,7 +44,7 @@ function getListFeedBack(){
     })
 
     getProjectsList().map((el) => {
-        document.getElementById("list-projects").insertAdjacentElement("afterbegin", createNewProject(el));
+        document.getElementById("list-projects").insertAdjacentElement("afterbegin", createProjectHandler(el));
     })
 
     getNewsList().map((el, index) => {
