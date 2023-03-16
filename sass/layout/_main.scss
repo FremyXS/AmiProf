@@ -2,68 +2,7 @@
     display: flex;
     flex-direction: column;
 
-    &-services{
-        display: flex;
-        flex-direction: column;
-        padding-top: 99px;
-
-        &__title{
-            display: flex;
-            justify-content: center;
-        }
-
-        &__content{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 60px;
-
-            &-element{
-                display: flex;
-                align-items: center;
-
-                &:nth-last-child(n+2){
-                    margin-bottom: 100px;
-                }
-
-                &:nth-child(even){
-                    margin-left: 121px;
-                }
-
-                &:nth-last-child(1){
-                    margin-bottom: 206px;
-                }
-
-                &__img:nth-child(odd){
-                    margin-right: 140px;
-                }
-
-                &__img:nth-child(even){
-                    margin-left: 140px;
-                }
-
-                &__text{
-
-                    &-title{
-                        margin-bottom: 34px;
-                        max-width: 432px;
-                    }
-
-                    &-description{
-                        max-width: 575px;
-                        font-size: 16px;
-                        line-height: 24px;
-                    }
-
-                    &-button{
-                        display: flex;                        
-                        justify-content: flex-end;
-                        margin-top: 38px;
-                    }
-                }
-            }
-        }
-    }
+    @import "../sections/services";
 
     &-feedback{
         background: #3E3E3D;
@@ -75,8 +14,6 @@
             flex-direction: column;
             align-items: center;
             position: relative;
-            
-           
         }
 
         &__img{

@@ -1,0 +1,139 @@
+&-services{
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+
+    &__title{
+        display: flex;
+        justify-content: center;
+    }
+
+    &__content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 60px;
+
+        &-element{
+            display: flex;
+            align-items: center;
+            position: relative;
+
+            &:nth-child(1) &__text{
+                margin-top: 50px;
+                margin-right: 105px;
+            }
+
+            &:nth-child(1) &__img{
+                margin-right: 140px;
+
+                &:before{
+                    content: url(../img/services/first_vector.svg);
+                    position: absolute;
+                    bottom: -2.5px;
+                    left: -360px;    
+                }
+
+                &:after{
+                    content: url(../img/services/second_vector.svg);
+                    position: absolute;  
+                    bottom: -410px;
+                    right: -570px;
+                    z-index: 9999;
+                }
+            }
+
+            &:nth-child(2){
+                margin-top: 105px;
+            }
+
+            &:nth-child(2) &__img{
+                margin-right: -130px;
+            }
+
+            &:nth-child(2) &__text{
+                margin-top: 65px;
+                margin-right: 180px;
+            }
+
+            &:nth-child(3){
+                margin-top: 100.45px;
+            }
+
+            &:nth-child(3) &__img{
+                position: relative;
+                margin-top: -6px;
+                margin-left: -100px;
+
+                &:after{
+                    content: url(../img/services/third_vector.svg);
+                    position: absolute;
+                    bottom: -75px;
+                    left: 382px;
+                    z-index: 9999;
+                }
+            }
+
+            &:nth-child(3) &__text{
+                margin-top: 107px;
+                margin-left: 132px;
+            }
+
+            &:nth-child(4){
+                margin-top: 99.55px;
+                margin-bottom: 206px;
+
+                &:before{
+                    content: url(../img/services/fourth_vector.svg);
+                    position: absolute;
+                    left: -350px;
+                    bottom: -143px;
+                    z-index: 9999;
+                }
+
+                &:after{
+                    content: url(../img/services/fifth_vector.svg);
+                    position: absolute;
+                    right: -486px;
+                    bottom: -193px;
+                    z-index: 9999;
+                }
+            }
+
+            &:nth-child(4) &__img{
+                margin-right: -135px;
+                margin-top: -2px;
+            }
+
+            &:nth-child(4) &__text{
+                margin-top: 58px;
+                margin-right: 74px;
+            }
+
+
+            &__img{
+                position: relative;
+            }
+
+            &__text{
+
+                &-title{
+                    margin-bottom: 34px;
+                    max-width: 432px;
+                }
+
+                &-description{
+                    max-width: 575px;
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+
+                &-button{
+                    display: flex;                        
+                    justify-content: flex-end;
+                    margin-top: 38px;
+                }
+            }
+        }
+    }
+}
