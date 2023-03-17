@@ -7,7 +7,6 @@
     // background: url(../img/headerImg.png) right bottom/974px 606px  no-repeat;
     background: #ffdda7;
     
-    mix-blend-mode: multiply;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     padding-top: 17px;
 
@@ -98,10 +97,10 @@
 
             &-image{
                 background-image: url(../img/headerImg.png);
-                mix-blend-mode: multiply;
                 background-repeat: no-repeat;
                 background-size: cover;
                 background-position: center;
+                mix-blend-mode: luminosity;
                 width: 974px;
                 height: 606px;
                 margin-top: -10px;

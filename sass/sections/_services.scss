@@ -27,19 +27,22 @@
             &:nth-child(1) &__img{
                 margin-right: 140px;
 
-                &:before{
-                    content: url(../img/services/first_vector.svg);
-                    position: absolute;
-                    bottom: -2.5px;
-                    left: -360px;    
-                }
+                @media screen and(min-width: 1920px){
+                    &:before{
+                        content: url(../img/services/first_vector.svg);
+                        position: absolute;
+                        bottom: -2.5px;
+                        left: -360px;    
+                    }
+    
+                    &:after{
+                        content: url(../img/services/second_vector.svg);
+                        position: absolute;  
+                        bottom: -410px;
+                        right: -570px;
+                        z-index: 9999;
+                    }
 
-                &:after{
-                    content: url(../img/services/second_vector.svg);
-                    position: absolute;  
-                    bottom: -410px;
-                    right: -570px;
-                    z-index: 9999;
                 }
             }
 
@@ -65,12 +68,14 @@
                 margin-top: -6px;
                 margin-left: -100px;
 
-                &:after{
-                    content: url(../img/services/third_vector.svg);
-                    position: absolute;
-                    bottom: -75px;
-                    left: 382px;
-                    z-index: 9999;
+                @media screen and(min-width: 1920px){
+                    &:after{
+                        content: url(../img/services/third_vector.svg);
+                        position: absolute;
+                        bottom: -75px;
+                        left: 382px;
+                        z-index: 9999;
+                    }
                 }
             }
 
@@ -83,21 +88,23 @@
                 margin-top: 99.55px;
                 margin-bottom: 206px;
 
-                &:before{
-                    content: url(../img/services/fourth_vector.svg);
-                    position: absolute;
-                    left: -350px;
-                    bottom: -143px;
-                    z-index: 9999;
-                }
-
-                &:after{
-                    content: url(../img/services/fifth_vector.svg);
-                    position: absolute;
-                    right: -476px;
-                    bottom: -193px;
-                    z-index: 9999;
-                }
+                @media screen and(min-width: 1920px) {
+                    &:before{
+                        content: url(../img/services/fourth_vector.svg);
+                        position: absolute;
+                        left: -350px;
+                        bottom: -143px;
+                        z-index: 9999;
+                    }
+    
+                    &:after{
+                        content: url(../img/services/fifth_vector.svg);
+                        position: absolute;
+                        right: -476px;
+                        bottom: -193px;
+                        z-index: 9999;
+                    }
+                }                
             }
 
             &:nth-child(4) &__img{
